@@ -1,0 +1,3 @@
+<?php
+// Cadastrar corrida
+?>

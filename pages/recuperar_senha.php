@@ -1,0 +1,3 @@
+<?php
+// Recuperação de senha
+?>

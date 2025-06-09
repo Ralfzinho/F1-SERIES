@@ -1,0 +1,3 @@
+<?php
+// Painel do piloto
+?>

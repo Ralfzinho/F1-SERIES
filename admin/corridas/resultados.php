@@ -1,0 +1,3 @@
+<?php
+// Resultados de corrida
+?>
