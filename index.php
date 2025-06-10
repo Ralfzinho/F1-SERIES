@@ -52,6 +52,7 @@
           <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Calendario</a></li>
           <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Temporada</a></li>
           <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Contato</a></li>
+          <li class="ms-4"><a href="/F1-SERIES/pages/conta.php" class="text-white text-decoration-none hover:text-success">Fazer Login</a></li>
         </ul>
       </nav>
     </div>
