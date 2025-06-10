@@ -43,18 +43,34 @@
 
 <body class="bg-light">
   <!-- Header -->
-  <header class="bg-dark text-white py-4">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="text-xl font-bold">F1 Series</div>
-      <nav>
-        <ul class="d-flex list-unstyled mb-0">
-          <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Inicio</a></li>
-          <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Calendario</a></li>
-          <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Temporada</a></li>
-          <li class="ms-4"><a href="#" class="text-white text-decoration-none hover:text-success">Contato</a></li>
-          <li class="ms-4"><a href="/F1-SERIES/pages/conta.php" class="text-white text-decoration-none hover:text-success">Fazer Login</a></li>
-        </ul>
-      </nav>
+  <header class="bg-dark text-white py-3">
+  <nav class="navbar navbar-expand-lg navbar-dark container">
+    <a class="navbar-brand fw-bold fs-4" href="#">F1 Series</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.php">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Calendário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Temporada</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="pages/conta.php">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     </div>
     <div id="carouselExample" class="carousel slide w-100 mt-5" data-bs-ride="carousel">
       <div class="carousel-inner">

@@ -26,7 +26,7 @@ session_start();
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Início</a>
+            <a class="nav-link text-white" href="../index.php">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Calendário</a>
@@ -38,7 +38,7 @@ session_start();
             <a class="nav-link text-white" href="#">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Login</a>
+            <a class="nav-link text-white" href="/pages/conta.php">Login</a>
           </li>
         </ul>
       </div>
