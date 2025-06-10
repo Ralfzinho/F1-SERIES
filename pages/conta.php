@@ -35,7 +35,7 @@ session_start();
             <a class="nav-link text-white" href="#">Temporada</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Contato</a>
+            <a class="nav-link text-white" href="/pages/sobre_nos.php">Contato</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="/pages/conta.php">Login</a>

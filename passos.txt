@@ -1,1 +1,86 @@
-Checklist ou anotações sobre o projeto.
+🗂️ Conteúdo
+Sobre a F1 Series
+Uma seção explicando o que é a F1 Series, regras do campeonato, como funciona a pontuação, etc.
+
+Pilotos e Equipes
+Página ou seção com cards dos pilotos (nome, time, país, foto/avatar) e das equipes participantes.
+
+Calendário de Corridas
+Lista com as datas, circuitos e horários das corridas (simuladas ou não).
+
+Classificação Geral (Leaderboard)
+Tabela atualizada com os pontos dos pilotos e equipes.
+
+Notícias / Atualizações
+Um blogzinho ou espaço com posts sobre os resultados das corridas, penalizações, análises etc. ✅
+
+💻 Funcionalidades
+Login/Cadastro (se necessário)
+Se quiser que os pilotos/participantes tenham acesso a uma área restrita.
+
+Painel de Administração
+Para vocês atualizarem resultados, cadastrar pilotos, atualizar classificações, etc.
+
+Comentários ou Fórum
+Para interação dos participantes e comunidade (pode usar Disqus ou similar).
+
+Sistema de Notificações ou Alerta
+Avisos de nova corrida, mudanças de regras, etc.
+
+Leilão ou Mercado de Pilotos (se aplicável)
+Se rolam trocas ou contratações no campeonato, dá pra fazer uma área só pra isso.
+
+🎨 Design e Estética
+Tema escuro/claro
+Um botão de alternância de tema pode deixar o site mais moderno.
+
+Animações sutis com JavaScript ou CSS
+Para dar vida ao site (ex: ao passar o mouse nos cards dos pilotos).
+
+Responsividade total
+Certifique-se de que o site funcione bem no celular e no desktop.
+
+📊 Extras Avançados
+Dashboard com gráficos (Recharts ou Chart.js)
+Mostrar evolução de desempenho dos pilotos ou estatísticas por corrida.
+
+Sistema de pontuação automatizado
+Um pequeno backend que calcula a classificação com base nos resultados inseridos.
+
+Página de Destaques/Vídeos (se tiver clips)
+Clips das corridas, memes do campeonato, entrevistas etc.
+
+🧩 Funcionalidades do Painel de Administração
+1. Login/Administração Segura
+Acesso apenas para administradores.
+
+Autenticação por login e senha.
+
+Proteção de rotas (página do admin só acessível logado).
+
+2. Gerenciamento de Pilotos
+Adicionar/editar/excluir pilotos.
+
+Dados: Nome, equipe, país, foto/avatar, número do carro, etc.
+
+3. Gerenciamento de Equipes
+Adicionar/editar/excluir equipes.
+
+Dados: Nome, piloto 1, piloto 2, escudo/logo, etc.
+
+4. Cadastro de Corridas
+Inserir nome da pista, data, horário, e resultado.
+
+5. Inserção de Resultados
+Marcar posições de chegada por piloto.
+
+Sistema que atualiza a pontuação automaticamente com base no resultado.
+
+6. Classificação
+Geração automática da tabela de classificação após cada corrida.
+
+Pontuação individual e por equipe.
+
+7. Notificações ou Atualizações
+Campo para inserir texto sobre novidades (ex: "Corrida em Interlagos no domingo!").
+
