@@ -70,5 +70,13 @@ session_start();
     </div>
   </div>
 </body>
+  <!-- Footer -->
+<footer class="bg-dark text-light text-center py-4 mt-12">
+  <p>&copy; 2020 F1 Series. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS (Optional for Carousel functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
 </html>
