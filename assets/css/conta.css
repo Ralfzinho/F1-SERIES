@@ -1,5 +1,8 @@
-body * {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,9 +14,6 @@ body {
   background-repeat: no-repeat;
   color: #E52020;
 }
-
-
-
 
 /* Container principal do login */
 .main-login {

@@ -5,12 +5,12 @@ session_start();
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 Series - Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Series - Página Inicial</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href='../assets/css/main.css' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -21,7 +21,6 @@ session_start();
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
@@ -34,66 +33,145 @@ session_start();
             <a class="nav-link text-white" href="#">Temporada</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/pages/sobre_nos.php">Contato</a>
+            <a class="nav-link text-white" href="/F1-SERIES/pages/sobre_nos.php">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/pages/conta.php">Login</a>
+            <a class="nav-link text-white" href="/F1-SERIES/pages/conta.php">Login</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+  <!-- Hero Section -->
+  <section class="bg-dark text-white text-center py-5 hero">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Velocidade. Emoção. Competição.</h1>
+      <p class="lead">Acompanhe cada curva da temporada F1 Series 2025</p>
+      <a href="#temporadas" class="btn btn-danger mt-4 px-5 py-2">Explorar Temporadas</a>
+    </div>
+  </section>
 
-  <!-- Conteúdo da página -->
-  <main class="container">
-    <section class="mb-5">
-      <h2 class="text-danger">O que é a F1 Series?</h2>
-      <p class="lead">A F1 Series é um campeonato de automobilismo virtual inspirado na Fórmula 1, disputado por jogadores controlando equipes em corridas simuladas. Aqui, você pode montar         sua escuderia, competir por títulos e fazer parte da elite do automobilismo digital.</p>
-    </section>
+  <!-- Destaques -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Destaques</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Última Corrida" />
+            <div class="card-body">
+              <h5 class="card-title">Última Corrida</h5>
+              <p class="card-text">GP da Espanha — Vitória de O. Piastri com volta mais rápida.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Piloto do Mês" />
+            <div class="card-body">
+              <h5 class="card-title">Piloto do Mês</h5>
+              <p class="card-text">Carlos R. (Red Phoenix) — Consistência e duas vitórias seguidas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Equipe Líder" />
+            <div class="card-body">
+              <h5 class="card-title">Equipe Líder</h5>
+              <p class="card-text">Black Arrow GP — 213 pontos acumulados na temporada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="mb-5">
-      <h3 class="text-danger">📋 Regras Gerais</h3>
-      <ul>
-        <li>10 equipes e 20 pilotos por temporada</li>
-        <li>Corridas simuladas semanalmente</li>
-        <li>Transferências e finanças ativas entre etapas</li>
-      </ul>
-    </section>
+  <!-- Grid de Categorias -->
+  <section id="temporadas" class="py-5 bg-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Explore o Universo F1 Series</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 p-4 bg-dark text-white text-center">
+            <h4>Temporadas</h4>
+            <p>Histórico completo de todas as temporadas anteriores.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 bg-dark text-white text-center">
+            <h4>Equipes</h4>
+            <p>Veja estatísticas e formações de todas as escuderias.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 p-4 bg-dark text-white text-center">
+            <h4>Pilotos</h4>
+            <p>Conheça os competidores e seus desempenhos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="mb-5">
-      <h3 class="text-danger">🏆 Pontuação</h3>
-      <p>As posições valem pontos conforme o padrão oficial:</p>
-      <table class="table table-bordered w-50">
-        <thead class="table-dark">
-          <tr>
-            <th>Posição</th>
-            <th>Pontos</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1º</td><td>25</td></tr>
-          <tr><td>2º</td><td>18</td></tr>
-          <tr><td>3º</td><td>15</td></tr>
-          <tr><td>...</td><td>...</td></tr>
-          <tr><td>10º</td><td>1</td></tr>
-        </tbody>
-      </table>
-    </section>
+  <!-- Vídeo ou Destaque da Comunidade -->
+  <section class="py-5 bg-secondary text-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Uma comunidade movida por paixão</h2>
+      <p class="mb-4">Confira como criamos experiências únicas em cada etapa. Registre-se como piloto ou torcedor!</p>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/QyVZ9ZTZqLs" title="Vídeo destaque" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-    <section class="mb-5">
-      <h3 class="text-danger">💼 Como Participar</h3>
-      <p>Interessado em correr? Entre em contato com a organização para garantir sua vaga. Você pode ser piloto ou gestor de equipe!</p>
-    </section>
-
-    <section class="mb-5">
-      <h3 class="text-danger">📨 Contato</h3>
-      <p>Para mais informações, entre em contato através do e-mail <strong>f1series@campeonato.com</strong> ou fale com os admins via Discord.</p>
-    </section>
-  </main>
+  <!-- FAQ -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 fw-bold text-center">Dúvidas Frequentes</h2>
+      <div class="accordion" id="faq">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              Como posso me cadastrar como piloto?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
+            <div class="accordion-body">
+              Basta acessar a página “Conta” no menu e preencher o formulário de inscrição com seus dados e equipe desejada.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              As corridas são simuladas ou jogadas ao vivo?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">
+              As corridas são disputadas ao vivo em simuladores de F1 com regras adaptadas e calendário oficial da liga.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    &copy; <?= date("Y"); ?> F1 Series. Todos os direitos reservados.
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">Junte-se à comunidade F1 Series</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="text-white text-decoration-none">Instagram</a>
+        <a href="#" class="text-white text-decoration-none">Twitter</a>
+        <a href="#" class="text-white text-decoration-none">YouTube</a>
+      </div>
+      <p class="mt-3 small">© 2025 F1 Series - Todos os direitos reservados</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -22,7 +22,6 @@ session_start();
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
@@ -35,10 +34,10 @@ session_start();
             <a class="nav-link text-white" href="#">Temporada</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/pages/sobre_nos.php">Contato</a>
+            <a class="nav-link text-white" href="/F1-SERIES/pages/sobre_nos.php">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/pages/conta.php">Login</a>
+            <a class="nav-link text-white" href="/F1-SERIES/pages/conta.php">Login</a>
           </li>
         </ul>
       </div>
@@ -70,9 +69,17 @@ session_start();
     </div>
   </div>
 </body>
-  <!-- Footer -->
-<footer class="bg-dark text-light text-center py-4 mt-12">
-  <p>&copy; 2020 F1 Series. Todos os direitos reservados.</p>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-2">Junte-se à comunidade F1 Series</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#" class="text-white text-decoration-none">Instagram</a>
+      <a href="#" class="text-white text-decoration-none">Twitter</a>
+      <a href="#" class="text-white text-decoration-none">YouTube</a>
+    </div>
+    <p class="mt-3 small">© 2025 F1 Series - Todos os direitos reservados</p>
+  </div>
 </footer>
 
 <!-- Bootstrap JS (Optional for Carousel functionality) -->

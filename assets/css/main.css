@@ -7,13 +7,30 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #E52020;
+}
+
 header {
   position: relative;
   z-index: 10;
 }
 
+.navbar {
+  padding: 0;
+}
+
+
+
 .nav {
   gap: 1rem;
+  padding: 0;
 }
 
 .nav-link {
@@ -22,5 +39,28 @@ header {
 }
 
 .nav-link:hover {
-  color: #e52020;
+  color: #e52020 !important; 
+}
+
+.carousel-item {
+  height: 60vh;
+  /* Ajuste a altura do carrossel conforme necessário */
+  max-height: 500px;
+  /* Limita a altura máxima */
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Ajustar o texto da legenda */
+.carousel-caption {
+  bottom: 10%;
+  /* Ajuste a posição da legenda */
 }
