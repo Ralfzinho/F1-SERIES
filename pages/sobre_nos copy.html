@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Series - Sobre Nos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 5, 5, 0.7)),
+                url("https://cdn.midjourney.com/17ec0d18-30bf-4b22-bda2-e9b9073408c6/0_3.png") center/cover no-repeat;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Navbar Tailwind -->
+    <header class="bg-black">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">F1 Series</div>
+            <div class="lg:hidden">
+                <button id="menuToggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="navMenu" class="hidden lg:flex space-x-6">
+                <a href="../index.php" class="text-white hover:text-red-500">Início</a>
+                <a href="#" class="text-white hover:text-red-500">Calendário</a>
+                <a href="#" class="text-white hover:text-red-500">Temporada</a>
+                <a href="/F1-SERIES/pages/sobre_nos.php" class="text-white hover:text-red-500">Contato</a>
+                <a href="/F1-SERIES/pages/conta.php" class="text-white hover:text-red-500">Login</a>
+            </nav>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden px-4 pb-4 space-y-2 bg-black">
+            <a href="../index.php" class="block text-white hover:text-red-500">Início</a>
+            <a href="#" class="block text-white hover:text-red-500">Calendário</a>
+            <a href="#" class="block text-white hover:text-red-500">Temporada</a>
+            <a href="/F1-SERIES/pages/sobre_nos.php" class="block text-white hover:text-red-500">Contato</a>
+            <a href="/F1-SERIES/pages/conta.php" class="block text-white hover:text-red-500">Login</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-32">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Experimente a <span
+                        class="text-red-600">Adrenalina</span> da Fórmula 1</h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-300">A simulação mais realista de corridas de F1 online.
+                    Compita contra pilotos de todo o mundo em temporadas emocionantes.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#inscricao"
+                        class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-bold text-white text-lg">Inscreva-se
+                        Agora</a>
+                    <a href="#temporadas"
+                        class="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4 rounded-lg font-bold text-lg">Explorar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+        <!-- Features Section -->
+    <section class="py-20 gradient-bg circuit-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">EXPERIÊNCIA <span class="text-red-600">IMERSIVA</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">Descubra por que milhares de pilotos escolhem nossa
+                    plataforma</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-8 transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-red-800 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Física Realista</h3>
+                    <p class="text-gray-400">Experimente a sensação real de pilotar um F1 com nosso motor de física
+                        avançado que simula com precisão cada aspecto da corrida.</p>
+                </div>
+
+                <div
+                    class="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-8 transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-red-800 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Competições Globais</h3>
+                    <p class="text-gray-400">Participe de campeonatos com pilotos de todo o mundo, com sistema de
+                        classificação e estatísticas detalhadas.</p>
+                </div>
+
+                <div
+                    class="bg-black bg-opacity-60 backdrop-blur-sm rounded-xl p-8 transition-all duration-300 card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-red-800 flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Personalização Total</h3>
+                    <p class="text-gray-400">Personalize seu carro, equipe e estratégias de corrida para maximizar seu
+                        desempenho nas pistas.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">20+</div>
+                    <p class="text-gray-400">Circuitos Oficiais</p>
+                </div>
+                <div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">10K+</div>
+                    <p class="text-gray-400">Pilotos Ativos</p>
+                </div>
+                <div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">50+</div>
+                    <p class="text-gray-400">Campeonatos por Ano</p>
+                </div>
+                <div class="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">99%</div>
+                    <p class="text-gray-400">Satisfação dos Pilotos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("mobileMenu");
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>
