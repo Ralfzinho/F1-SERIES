@@ -1,50 +1,15 @@
 <?php
 session_start();
+define('INC', __DIR__ . '/includes/');
 ?>
+
 <!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RACE FOR GLORY - Início</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { dark: '#0b0b0c', primary: '#ef4444' }
-        }
-      }
-    }
-  </script>
-
-  <!-- Seu CSS opcional -->
-  <link href="../F1-SERIES/assets/css/main.css" rel="stylesheet">
-</head>
+<?php require INC . 'layout_head.php'; ?>
 <body class="bg-neutral-50 text-neutral-900">
 
   <!-- Header -->
-  <header class="bg-dark text-white">
-    <nav class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a class="font-bold text-xl tracking-wide" href="#">RACE FOR GLORY</a>
-
-      <!-- mobile -->
-      <button id="menuBtn" class="md:hidden" aria-label="Abrir menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-
-      <ul id="menu" class="hidden md:flex gap-6 items-center">
-        <li><a class="text-white/90 hover:text-white" href="../index.php">Início</a></li>
-        <li><a class="text-white/90 hover:text-white" href="#">Calendário</a></li>
-        <li><a class="text-white/90 hover:text-white" href="#">Temporada</a></li>
-        <li><a class="text-white/90 hover:text-white" href="../F1-SERIES/pages/sobre_nos.php">Contato</a></li>
-        <li><a class="inline-flex items-center px-3 py-1.5 rounded border border-white/20 hover:border-white" href="../F1-SERIES/pages/conta.php">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+  <?php require INC . 'layout_nav.php'; ?>
 
   <!-- Hero -->
   <section class="relative text-white">
@@ -116,18 +81,7 @@ session_start();
     </aside>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-8">
-    <div class="mx-auto max-w-6xl px-4">
-      <p class="mb-2">Junte-se à comunidade RACE FOR GLORY</p>
-      <div class="flex justify-center gap-6 text-white/90">
-        <a href="#" class="hover:text-white">Instagram</a>
-        <a href="#" class="hover:text-white">Twitter</a>
-        <a href="#" class="hover:text-white">YouTube</a>
-      </div>
-      <p class="mt-6 text-sm text-white/60">© 2025 RACE FOR GLORY - Todos os direitos reservados</p>
-    </div>
-  </footer>
+  <?php require INC . 'layout_footer.php'; ?>
 
   <!-- Scripts -->
   <script src="assets/JavaScript/noticias_card_tailwind.js"></script>

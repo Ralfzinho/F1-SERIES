@@ -1,89 +1,103 @@
 <?php
 session_start();
+
+require_once dirname(__DIR__) . '/includes/funcoes.php';
+
+// constante para facilitar includes deste arquivo (que está em /pages)
+define('INC', dirname(__DIR__) . '/includes/');
+
+$erro = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $email = trim($_POST['usuario'] ?? '');
+  $senha = $_POST['senha'] ?? '';
+
+  if ($email === '' || $senha === '') {
+    $erro = 'Preencha usuário e senha.';
+  } elseif (auth_login($email, $senha)) {
+    // Redireciona conforme papel
+    if (auth_is('admin')) {
+      header('Location: /admin/dashboard.php');
+      exit;
+    } elseif (auth_is('editor')) {
+      header('Location: /editor/dashboard.php');
+      exit;
+    } else {
+      header('Location: /index.php');
+      exit;
+    }
+  } else {
+    $erro = 'Usuário ou senha inválidos.';
+  }
+}
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 Series - Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href='../assets/css/main.css' rel="stylesheet">
-  <link href='../assets/css/conta.css' rel="stylesheet">
+  <?php require_once INC . 'layout_head.php'; ?>
 </head>
+<body class="flex flex-col min-h-screen bg-neutral-50 text-neutral-900">
 
-<body>
-  <header class="bg-dark text-white py-3">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand fw-bold fs-4" href="#">F1 Series</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav gap-2">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="../index.php">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Calendário</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Temporada</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/F1-SERIES/pages/sobre_nos.php">Contato</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/F1-SERIES/pages/conta.php">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <div class="main-login">
-    <div class="esquerda-login">
-      <h1>Faça login <br> Na Plataforma</h1>
-      <img src="../assets/img/tela_login.jpg" class="image-esquerda" alt="Piloto">
+  <!-- Header -->
+  <?php require_once INC . 'layout_nav.php'; ?>
+
+  <!-- Área principal -->
+  <main class="flex-1 flex flex-col md:flex-row">
+    <!-- Lado esquerdo -->
+    <div class="md:w-1/2 flex flex-col justify-center items-center bg-gradient-to-b from-red-900 via-dark to-black text-white p-8">
+      <h1 class="text-3xl md:text-4xl font-bold mb-6">Faça login <br> na Plataforma</h1>
+      <img src="../assets/img/tela_login.jpg" alt="Piloto" class="rounded-lg shadow-lg max-w-sm">
     </div>
-    <div class="direita-login">
-      <div class="card-login">
-        <h1>login</h1>
-        <div class="textfield">
-          <label for="usuario">Usuário</label>
-          <input type="text" name="usuario" placeholder="Usuário">
-        </div>
-        <div class="textfield">
-          <label for="senha">Senha</label>
-          <input type="password" name="senha" placeholder="Senha">
-        </div>
-        <div class="textfield">
-          <label>
-            <input type="checkbox"> Lembrar de mim
-          </label>
-        </div>
-        <button class="btn-login">Login</button>
+
+    <!-- Lado direito -->
+    <div class="md:w-1/2 flex justify-center items-center bg-white p-8">
+      <div class="w-full max-w-sm bg-white border rounded-2xl shadow p-6">
+        <h1 class="text-2xl font-bold text-center mb-6">Login</h1>
+
+        <?php if (!empty($erro)): ?>
+          <div class="mb-4 rounded-lg border border-red-200 bg-red-50 text-red-800 px-3 py-2 text-sm">
+            <?= htmlspecialchars($erro) ?>
+          </div>
+        <?php endif; ?>
+
+        <form action="" method="post" class="space-y-4">
+          <div>
+            <label for="usuario" class="block text-sm font-medium">Usuário (email)</label>
+            <input
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="admin@rfg.local"
+              value="<?= htmlspecialchars($_POST['usuario'] ?? '') ?>"
+              class="mt-1 w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+          </div>
+          <div>
+            <label for="senha" class="block text-sm font-medium">Senha</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+              class="mt-1 w-full rounded-lg border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+          </div>
+          <div class="flex items-center">
+            <input id="lembrar" type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+            <label for="lembrar" class="ml-2 text-sm">Lembrar de mim</label>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-red-700 transition"
+          >
+            Login
+          </button>
+        </form>
       </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <?php require_once INC . 'layout_footer.php'; ?>
+
 </body>
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p class="mb-2">Junte-se à comunidade F1 Series</p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="#" class="text-white text-decoration-none">Instagram</a>
-      <a href="#" class="text-white text-decoration-none">Twitter</a>
-      <a href="#" class="text-white text-decoration-none">YouTube</a>
-    </div>
-    <p class="mt-3 small">© 2025 F1 Series - Todos os direitos reservados</p>
-  </div>
-</footer>
-
-<!-- Bootstrap JS (Optional for Carousel functionality) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-
 </html>

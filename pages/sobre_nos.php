@@ -138,7 +138,7 @@ session_start();
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
             <div class="accordion-body">
-              Basta acessar a página “Conta” no menu e preencher o formulário de inscrição com seus dados e equipe desejada.
+              Basta acessar a página “login” no menu e clicar me "cadastrar" e preencher o formulário de inscrição com seus dados e equipe desejada.
             </div>
           </div>
         </div>
