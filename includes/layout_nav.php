@@ -17,14 +17,17 @@
     <div class="hidden md:block">
       <ul id="mainMenu" class="flex gap-6 items-center">
         <li><a class="text-white/90 hover:text-white" href="/index.php">Início</a></li>
-        <li><a class="text-white/90 hover:text-white" href="#">Calendário</a></li>
-        <li><a class="text-white/90 hover:text-white" href="#">Temporada</a></li>
-        <li><a class="text-white/90 hover:text-white" href="../pages/sobre_nos.php">Contato</a></li>
+        <li><a class="text-white/90 hover:text-white" href="/pages/corridas.php">Corridas</a></li>
+        <li><a class="text-white/90 hover:text-white" href="/pages/classificacao.php">Classificação</a></li>
+        <li><a class="text-white/90 hover:text-white" href="/pages/equipes.php">Equipes</a></li>
+        <li><a class="text-white/90 hover:text-white" href="/pages/pilotos.php">Pilotos</a></li>
+        <li><a class="text-white/90 hover:text-white" href="/pages/sobre_nos.php">Contato</a></li>
+
         <?php if ($logged): ?>
           <li><a class="inline-flex items-center px-3 py-1.5 rounded bg-primary text-white" href="/admin/dashboard.php">Painel</a></li>
           <li><a class="text-white/90 hover:text-white" href="/admin-login/logout.php">Sair</a></li>
         <?php else: ?>
-          <li><a class="inline-flex items-center px-3 py-1.5 rounded border border-white/20 hover:border-white" href="../pages/conta.php">Login</a></li>
+          <li><a class="inline-flex items-center px-3 py-1.5 rounded border border-white/20 hover:border-white" href="/pages/conta.php">Login</a></li>
         <?php endif; ?>
       </ul>
     </div>
@@ -36,14 +39,17 @@
       <div class="mx-auto max-w-6xl px-4 py-3">
         <ul class="flex flex-col gap-3">
           <li><a class="block py-2 text-white/90 hover:text-white" href="/index.php">Início</a></li>
-          <li><a class="block py-2 text-white/90 hover:text-white" href="#">Calendário</a></li>
-          <li><a class="block py-2 text-white/90 hover:text-white" href="#">Temporada</a></li>
-          <li><a class="block py-2 text-white/90 hover:text-white" href="/includes/pages/sobre_nos.php">Contato</a></li>
+          <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/corridas.php">Corridas</a></li>
+          <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/classificacao.php">Classificação</a></li>
+          <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/equipes.php">Equipes</a></li>
+          <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/pilotos.php">Pilotos</a></li>
+          <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/sobre_nos.php">Contato</a></li>
+
           <?php if ($logged): ?>
             <li><a class="block py-2 text-white/90 hover:text-white" href="/admin/dashboard.php">Painel</a></li>
             <li><a class="block py-2 text-white/90 hover:text-white" href="/admin-login/logout.php">Sair</a></li>
           <?php else: ?>
-            <li><a class="block py-2 text-white/90 hover:text-white" href="/includes/pages/conta.php">Login</a></li>
+            <li><a class="block py-2 text-white/90 hover:text-white" href="/pages/conta.php">Login</a></li>
           <?php endif; ?>
         </ul>
       </div>

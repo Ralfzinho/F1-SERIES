@@ -27,14 +27,37 @@ $title = 'Painel — Racing for Glory';
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
-      <a href="/piloto/dashboard.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
+      <!-- Pilotos -->
+      <a href="/admin/pilotos/listar.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
         <h3 class="font-semibold mb-2">Pilotos</h3>
-        <p class="text-sm text-neutral-500">Gerenciar lista de pilotos (mock)</p>
+        <p class="text-sm text-neutral-500">Gerenciar lista de pilotos</p>
       </a>
+
+      <!-- Equipes -->
+      <a href="/admin/equipes/listar.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
+        <h3 class="font-semibold mb-2">Equipes</h3>
+        <p class="text-sm text-neutral-500">Gerenciar lista de equipes</p>
+      </a>
+
+      <!-- Corridas -->
+      <a href="/admin/corridas/listar.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
+        <h3 class="font-semibold mb-2">Corridas</h3>
+        <p class="text-sm text-neutral-500">Gerenciar corridas e calendário</p>
+      </a>
+
+      <!-- Resultados -->
+      <a href="/admin/resultados/listar.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
+        <h3 class="font-semibold mb-2">Resultados</h3>
+        <p class="text-sm text-neutral-500">Lançar resultados de corridas</p>
+      </a>
+
+      <!-- Classificação -->
       <a href="/admin/classificacao.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
         <h3 class="font-semibold mb-2">Classificação</h3>
-        <p class="text-sm text-neutral-500">Tabela por equipes/pilotos (mock)</p>
+        <p class="text-sm text-neutral-500">Tabela por equipes/pilotos</p>
       </a>
+
+      <!-- Cadastro de Piloto -->
       <a href="/pages/cadastro_piloto.php" class="block rounded-2xl border bg-white p-6 shadow hover:shadow-md transition">
         <h3 class="font-semibold mb-2">Cadastrar Piloto</h3>
         <p class="text-sm text-neutral-500">Formulário Tailwind</p>
