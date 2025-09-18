@@ -1,33 +1,48 @@
 <?php
+// Inclui a conexão com o banco de dados
 include('../includes/db.php');
 ?>
+
 <?php include('../includes/layout_head.php'); ?>
 <?php include('../includes/layout_nav.php'); ?>
 
-<div class="container mt-5">
-    <h1 class="mb-4">Equipes</h1>
-    <div class="row">
-        <?php
-        $sql = "SELECT * FROM Equipes";
-        $res = $conn->query($sql);
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Classificação das Equipes</h1>
 
-        if ($res->num_rows > 0) {
-            while ($row = $res->fetch_assoc()) {
-                echo "<div class='col-md-4 mb-4'>
-                        <div class='card'>
-                            <img src='".$row['logo_url']."' class='card-img-top' alt='Logo da equipe'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>".$row['nome']."</h5>
-                                <p><b>País:</b> ".$row['pais']."</p>
-                                <p><b>Chefe:</b> ".$row['chefe']."</p>
-                            </div>
-                        </div>
-                      </div>";
-            }
-        } else {
-            echo "<p>Nenhuma equipe cadastrada.</p>";
-        }
-        ?>
+    <!-- Classificação das Equipes -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="min-w-full table-auto">
+            <thead>
+                <tr class="bg-gray-100 text-left text-sm font-semibold text-gray-700">
+                    <th class="py-3 px-4">Posição</th>
+                    <th class="py-3 px-4">Equipe</th>
+                    <th class="py-3 px-4">Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Consulta para a classificação das equipes
+                $sql = "SELECT e.nome as equipe, SUM(r.pontos) as pontos
+                        FROM Resultados r
+                        JOIN Equipes e ON e.id = r.equipe_id
+                        GROUP BY e.id
+                        ORDER BY pontos DESC";
+
+                // Preparando a consulta usando PDO
+                $stmt = $pdo->query($sql);
+
+                $pos = 1;
+                while ($row = $stmt->fetch()) {
+                    echo "
+                    <tr class='border-b'>
+                        <td class='py-3 px-4'>".$pos++."</td>
+                        <td class='py-3 px-4'>".$row['equipe']."</td>
+                        <td class='py-3 px-4'>".$row['pontos']."</td>
+                    </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 

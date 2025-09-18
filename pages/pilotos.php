@@ -1,35 +1,50 @@
 <?php
+// Inclui a conexão com o banco de dados
 include('../includes/db.php');
 ?>
+
 <?php include('../includes/layout_head.php'); ?>
 <?php include('../includes/layout_nav.php'); ?>
 
-<div class="container mt-5">
-    <h1 class="mb-4">Pilotos</h1>
-    <div class="row">
-        <?php
-        $sql = "SELECT p.nome, p.numero, p.foto_url, e.nome as equipe
-                FROM Pilotos p
-                LEFT JOIN Pilotos_Temporadas pt ON pt.piloto_id = p.id
-                LEFT JOIN Equipes e ON e.id = pt.equipe_id";
-        $res = $conn->query($sql);
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Lista de Pilotos da Temporada</h1>
 
-        if ($res->num_rows > 0) {
-            while ($row = $res->fetch_assoc()) {
-                echo "<div class='col-md-3 mb-4'>
-                        <div class='card'>
-                            <img src='".$row['foto_url']."' class='card-img-top' alt='Foto do piloto'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>#".$row['numero']." ".$row['nome']."</h5>
-                                <p class='card-text'><b>Equipe:</b> ".$row['equipe']."</p>
-                            </div>
-                        </div>
-                      </div>";
-            }
-        } else {
-            echo "<p>Nenhum piloto cadastrado.</p>";
-        }
-        ?>
+    <!-- Lista de Pilotos -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="min-w-full table-auto text-sm">
+            <thead>
+                <tr class="bg-gray-100 text-left text-sm font-semibold text-gray-700">
+                    <th class="py-3 px-4">Posição</th>
+                    <th class="py-3 px-4">Piloto</th>
+                    <th class="py-3 px-4">Equipe</th>
+                    <th class="py-3 px-4">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Consulta para a lista de pilotos da temporada
+                $sql = "SELECT p.nome as piloto, e.nome as equipe, p.status
+                        FROM Pilotos p
+                        JOIN Equipes e ON e.id = p.equipe_id
+                        WHERE p.status = 'ativo' -- Filtra apenas pilotos ativos
+                        ORDER BY p.nome ASC";
+
+                // Preparando a consulta usando PDO
+                $stmt = $pdo->query($sql);
+
+                $pos = 1;
+                while ($row = $stmt->fetch()) {
+                    echo "
+                    <tr class='border-b'>
+                        <td class='py-3 px-4'>".$pos++."</td>
+                        <td class='py-3 px-4'>".$row['piloto']."</td>
+                        <td class='py-3 px-4'>".$row['equipe']."</td>
+                        <td class='py-3 px-4'>".$row['status']."</td>
+                    </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
 </div>
 
