@@ -16,13 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   } elseif (auth_login($email, $senha)) {
     // Redireciona conforme papel
     if (auth_is('admin')) {
-      header('Location: /admin/dashboard.php');
+      header('Location: ../../F1-SERIES/admin/dashboard.php');
       exit;
     } elseif (auth_is('editor')) {
-      header('Location: /editor/dashboard.php');
+      header('Location: ../../F1-SERIES//editor/dashboard.php');
       exit;
     } else {
-      header('Location: /index.php');
+      header('Location: ../../F1-SERIES/aa/index.php');
       exit;
     }
   } else {

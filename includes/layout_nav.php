@@ -2,15 +2,25 @@
 <header class="bg-dark text-white sticky top-0 z-50">
   <nav class="relative mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
     <!-- Brand -->
-    <a href="/index.php" class="font-bold text-xl tracking-wide">RACE FOR GLORY</a>
+    <div class="flex items-center gap-3">
+      <a href="/index.php" class="flex items-center gap-3 font-extrabold text-xl tracking-wide">
+        <img src="/F1-SERIES/assets/img/logo.png" alt="Logo da Liga" class="h-9 w-9 object-contain" />
+        <span>RACE FOR <span class="text-[#FFD700]">GLORY</span></span>
+      </a>
+    </div>
+
 
     <!-- Botão hambúrguer (só aparece no mobile) -->
     <button
       id="menuBtn"
       class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
       aria-controls="mobilePanel" aria-expanded="false" aria-label="Abrir menu">
-      <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
     </button>
 
     <!-- Menu desktop -->
@@ -58,7 +68,7 @@
 </header>
 
 <script>
-  (function () {
+  (function() {
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobilePanel');
     const iconOpen = document.getElementById('iconOpen');

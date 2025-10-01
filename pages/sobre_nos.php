@@ -52,40 +52,6 @@ session_start();
   </section>
 
   <!-- Destaques -->
-  <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="mb-4 fw-bold">Destaques</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Última Corrida" />
-            <div class="card-body">
-              <h5 class="card-title">Última Corrida</h5>
-              <p class="card-text">GP da Espanha — Vitória de O. Piastri com volta mais rápida.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Piloto do Mês" />
-            <div class="card-body">
-              <h5 class="card-title">Piloto do Mês</h5>
-              <p class="card-text">Carlos R. (Red Phoenix) — Consistência e duas vitórias seguidas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="../../F1-SERIES/assets/img/tela_login.jpg" class="card-img-top" alt="Equipe Líder" />
-            <div class="card-body">
-              <h5 class="card-title">Equipe Líder</h5>
-              <p class="card-text">Black Arrow GP — 213 pontos acumulados na temporada.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Grid de Categorias -->
   <section id="temporadas" class="py-5 bg-white text-center">
